@@ -1,0 +1,23 @@
+[
+  {
+    type: 'faker',
+    module : 'faker',
+    action : 'faker',
+    groupTitle : 'Faker',
+    groupIcon : 'fal fa-lg fal fa-dizzy comp-data',
+    title : 'Faker @@var(name)@@',
+    icon : 'fal fa-lg fa-dizzy comp-data',
+    dataPickObject: true,
+    properties : [
+      {
+        group: 'Faker options',
+        variables: [
+          { name: 'name', optionName: 'name', title: 'Name', type: 'text', required: true, defaultValue: '', help: 'This will be the name for the output key and the tag used in the expression builder'},       
+          { name: 'data', optionName:'data', title: 'Data', type: 'text', required: false, defaultValue :'', help: 'Combine faker API methods using a mustache string format. i.e. {{name.firstName}} {{name.lastName}}'},
+          { name: 'locale', optionName:'locale', title: 'Locale', type: 'text', required: false, defaultValue :'', serverDataBindings: true, help: 'The default language locale is set to English.'},
+          { name: 'seed', optionName:'seed', title: 'Seed', type: 'number', required: false, defaultValue :'', help: 'If you want consistent results, you can set your own seed:'}
+        ]
+      }
+    ]
+  },
+]
